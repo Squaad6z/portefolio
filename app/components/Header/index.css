@@ -3,10 +3,12 @@
     height: 35px;
 }
 
-@media screen and (min-width: 1440px){
+nav{
+    height: 100%;
+}
 
 .sidebar{
-    width: 4%;
+    width: 75px;
     height: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -18,9 +20,8 @@
 }
 
 .sidebar:hover {
-    width: 11.5%;
+    width: 240px;
     border-right: solid rgb(0, 0, 0);
-
 }
 
 .sidebar:hover > .item > .text {
@@ -28,7 +29,7 @@
 }
 
 .sidebar:hover > hr {
-    width: 9%;
+    width: 185px;
     
 }
 
@@ -58,29 +59,29 @@ hr{
 .item .text {
     opacity: 0;
     margin-left: 60px;
-    white-space: nowrap;
     overflow: hidden;
     transition : ease-in-out 0.3s;
 
 }
-}
-/* Responsive 1024px */
-@media screen and (min-width: 1024px) {
 
-}
-
-/* Responsive 768px */
-@media screen and (min-width: 768px) {
-
-}
-@media screen and (min-width: 320px) and (max-width: 768px){
+@media screen and (min-width: 280px) and (max-width: 1023px){
     .sidebar{
         display: flex;
         flex-direction: row;
-        height: 70px;
+        height: 80px;
         width: 100%;
-        border: none;
+        border-right: white;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 20px 0;
     }
+
+    .sidebar:hover{
+        border: none;
+        height: 120px;
+        width: 100%;
+    }
+
     #home, #profil, #codepc, #reseaux, .text {
         display: flex;
         position: initial;
@@ -91,17 +92,35 @@ hr{
     .item{
         margin: 0;
         flex-direction: column;
+        width: 75px;
+        
     }
     .item .text{
         margin: 0;
+        margin-top: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .text{
+        font-size: 15px;
+        height: 40px;
+        align-items: center;
     }
 
     hr{
         top: 50px;
-
+        display: none;
     }
+
     .sidebar:hover > hr {
-        width: 100%;
+        width: 95%;
+        margin-top: 15px;
+        border-right: white;
+        display: inline;
         
     }
 }
