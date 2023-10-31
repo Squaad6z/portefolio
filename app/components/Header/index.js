@@ -13,12 +13,6 @@ const Header = () => {
       </div>
       <hr></hr>
       <div className='item'> 
-      <img src="/images/card-regular.svg" 
-      alt="icon" className="icon" id="home"
-      ></img>
-      <Link className='text' href="/mes_informations">Mes Informations</Link>
-      </div>
-      <div className='item'> 
       <img src="/images/sitemap-solid.svg" 
       alt="icon" className="icon" id="home"
       ></img>
@@ -29,6 +23,12 @@ const Header = () => {
       alt="icon" className="icon" id="home"
       ></img>
       <Link className='text' href="/realisations">Réalisations</Link>
+      </div>
+      <div className='item'> 
+      <img src="/images/envelope-regular.svg" 
+      alt="icon" className="icon" id="home"
+      ></img>
+      <Link className='text' href="/contact">Contact</Link>
       </div>
     </header>
   )

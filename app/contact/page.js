@@ -1,12 +1,11 @@
 import React from 'react'
 import Header from '../components/Header'
-
-const hard_skills = () => {
+const contact = () => {
   return (
     <>
     <Header />
-    </>
+    <div>contact</div></>
   )
 }
 
-export default hard_skills
+export default contact
