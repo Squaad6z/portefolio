@@ -17,13 +17,13 @@ nav{
     border-right: solid black ;
     display: flex;
     flex-direction: column;
-    background:linear-gradient(180deg, rgba(252,251,251,1) 60%, rgba(5,5,5,1) 100%);
+    background:linear-gradient(180deg, rgba(252,251,251,1) 60%, rgba(15, 68, 121) 100%);
 
 }
 
 .sidebar:hover {
     width: 240px;
-    border-right: solid rgb(0, 0, 0);
+    border-right: solid;
 }
 
 .sidebar:hover > .item > .text {
@@ -38,7 +38,7 @@ nav{
 hr{
     display: flex;
     width: 50px;
-    border-bottom: solid 2px rgb(0, 0, 0);
+    border-bottom: solid 3px #0f4479;
     position: fixed;
     top: 140px;
     transition : ease-in-out 0.3s;
@@ -54,7 +54,7 @@ hr{
 #home, #profil, #codepc, #reseaux, .text {
     position: fixed;
     text-decoration: none;
-    color: black;
+    color:#0f4479;
 }
 
 
@@ -63,7 +63,10 @@ hr{
     margin-left: 60px;
     overflow: hidden;
     transition : ease-in-out 0.3s;
+}
 
+.text:hover{
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 280px) and (max-width: 1023px){
@@ -89,7 +92,7 @@ hr{
         display: flex;
         position: initial;
         text-decoration: none;
-        color: black;
+        color:#0f4479;
     }
 
     .item{

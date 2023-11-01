@@ -11,6 +11,7 @@
     margin-top: 110px;
     margin-left: 150px;
     gap: 35px;
+    color: #0f4479;
 }
 
 h1{
@@ -34,6 +35,12 @@ h1{
     overflow: hidden;
     object-fit: cover;
     border-radius: 50%;
+    filter: grayscale();
+}
+
+.homepage_photo:hover{
+    filter: none;
+    object-fit: cover;
 }
 
 #homepage_bar{
@@ -53,8 +60,42 @@ h1{
     top: 110px;
     background-color: black;
     border: solid ;
+    animation: 1s slide linear 1.5s infinite alternate;
 }
 
+
+
+.homepage_photo:hover + .homepage_description {
+    position: absolute;
+    display: flex;
+    z-index: -1;
+    top: 0px;
+    right: 125px;
+    width: 200px;
+    height: 200px;
+    opacity: 80%;
+}
+
+.description_liste{
+    color: #0f4479;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.age ,.ville{
+    margin-left: 25px;
+}
+
+.homepage_description{
+    display: none;
+    
+}
+
+@keyframes slide {
+    from { top: 110px;}
+    to { top: 305px;}
+}
+    
 .homepage_first_title::after{
     font-size: 30px;
     content: '';
@@ -87,10 +128,10 @@ h1{
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 550px;
+    top: 400px;
     width: 87%;
     height: 250px;
-    background-color: black;
+    background-color: #0f4479;
     justify-content: center;
 }
 
@@ -106,6 +147,25 @@ p{
     margin-left: 50px;
     margin-top: 25px;
     font-size: 20px;
+}
+
+.services{
+    position: fixed;
+    bottom: 150px;
+    height: 150px;
+    width: 88%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.services_informations{
+    height: 150px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 25px;
+    padding-top: 15px;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1350px){
@@ -128,21 +188,26 @@ p{
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
     #homepage_bar{
-        left: 50px;
+        left: 350px;
     }
 
     .homepage_round{
         left: 120px;
     }
 
-    #homepage_bar_scroll{
-        left: 50px;
-    }
 
     .homepage_title{
         margin-left: 380px;
         margin-top: 40px;
         width: 45%;
+    }
+    .homepage_photo:hover + .homepage_description{
+        top: 0px;
+        right: 125px;
+    }
+
+    .informations{
+        top: 450px;
     }
 }
 
@@ -151,7 +216,7 @@ p{
         left: 20px;
     }
     .homepage_round{
-        right: 20px;
+        right: 10px;
     }
 
     #homepage_bar_scroll{
@@ -166,14 +231,18 @@ p{
 
     .informations{
         width: 95%;
-        top: 680px;
-        height: 380px;
+        top: 750px;
+        height: 300px;
     }
 }
 
 @media screen and (min-width: 300px) and (max-width: 340px){
     .homepage_round{
         top: 450px;
+    }
+
+    .region{
+        margin-left: 25px;
     }
 }
 
