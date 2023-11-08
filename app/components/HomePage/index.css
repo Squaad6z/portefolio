@@ -241,6 +241,10 @@ p{
         left: 350px;
     }
 
+    main{
+        height: 100%;
+    }
+
     .homepage_presentation{
         flex-direction: row-reverse;
         margin-left: 10px;
@@ -277,11 +281,15 @@ p{
 }
 
 @media screen and (min-width: 300px) and (max-width: 767px){
+
+    body{
+        height: 100%;
+    }
     .homepage_presentation{
         flex-direction: column;
         margin-top: 10px;
         margin-left: 10px;
-        height: 500px;
+        height: 550px;
         gap: 0px;
     }
 
@@ -312,8 +320,8 @@ p{
 
     .services{
         display: flex;
-        margin-top: 70px;
-        height: 500px;
+        margin-top: 20px;
+        height: 650px;
         align-items: center;
     }
 
@@ -343,7 +351,6 @@ p{
         height: 170px;
     }
 }
-
 @media screen and (min-width: 341px) and (max-width: 767px){
     .homepage_round{
         top: 380px;

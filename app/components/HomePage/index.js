@@ -39,7 +39,7 @@ const HomePage = () => {
       <h2 className='services_title'>Mes Services</h2>
       <section className='services_bloc'>
       <aside className='services_informations'>
-        <h4 className='services_informations_title'>Appliactions</h4>
+        <h4 className='services_informations_title'>Applications</h4>
         <p className='services_informations_description'>Concevoir des applications web interactives et fonctionnelles pour répondre à vos besoins spécifiques.</p>
       </aside>
       <aside className='services_informations'>

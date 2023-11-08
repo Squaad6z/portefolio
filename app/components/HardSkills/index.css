@@ -1,37 +1,142 @@
-.box{
-    /* position: relative; */
+.box {
+    position: relative;
     display: flex;
-
-    width: 30%;
+    width: 300px;
     height: 30%;
-    transform-style : preserve-3d ;
-    animation: turn 5s linear backwards;
+    padding: 50px;
+}
+
+.box:hover {
+    transform-style: preserve-3d;
+    animation: turn 2s linear both;
 }
 
 @keyframes turn {
     0% {
-        transform:  rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    90% {
+        /* filter:brightness(50%) */
     }
     100% {
-        transform:  rotateY(360deg);
-
+        transform: rotateY(180deg);
     }
 }
-
 
 .box span img {
     position: absolute;
-    top: 0;
     left: 0;
+    top: 25px;
     width: 100%;
-    height: 250px;
-    object-fit:contain;
+    height: 100%;
+    object-fit: contain;
+    padding: 35px;
 }
 
-.content{
+
+.content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     align-items: center;
 }
+
+.box span img:hover {
+    top: 25px;
+}
+
+.box .description{
+  display: none; /* Cachez le contenu par défaut */
+  position: absolute;
+  left: 0;
+  border-radius: 25px;
+  width: 300px;
+  height: 300px;
+  color:  white;
+  font-size: 20px;
+  background-color: black;
+  opacity: 0.7; /* Ajoutez une couleur de fond pour le contenu */
+  padding: 50px; /* Ajoutez de la marge intérieure au contenu */
+  transform: rotateY(180deg); /* Rotation de 180 degrés pour le contenu */
+  backface-visibility: hidden; 
+}
+
+.box:hover .description {
+    display: flex;
+    align-items: center;
+    top: 40px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1275px){
+    .box{
+        margin: 5px;
+        width: 250px;
+        height: 20%;
+    }
+
+    .content {
+        height: 100%;
+    }
+
+    .box .description{
+        height: 250px;
+        width: 250px;
+        padding: 20px;
+        top: 25px; 
+    }
+
+    .box:hover .description {
+        top: -12.5px;
+  }}
+
+  @media screen and (min-width: 768px) and (max-width: 1023px){
+    .content{
+        height: 100%;
+        align-content: normal;
+        display: flex;
+        align-items: normal;
+    }
+
+    .box{
+        margin: 5px;
+        width: 250px;
+    }
+
+    .box span img{
+        top: 25px;
+    }
+
+    .box .description {
+        left: 0;     
+        height: 260px;
+        width: 250px;
+        padding:30px;
+    }
+    main{
+        height: 100%;
+    }
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 767px){
+    .content{
+        height: 1550px;
+    }
+
+    .box{
+        height: 200px;
+    }
+
+    .box span img{
+        padding: 20px;
+    }
+
+    .box .description{
+        height: 200px;
+        padding: 25px;
+    }
+
+    .box:hover .description{
+        top: 25px;
+    }
+  }
