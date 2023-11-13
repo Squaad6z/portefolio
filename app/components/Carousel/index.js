@@ -11,15 +11,16 @@ const infoProjet = [
         name : "Nina Carducci",
         subtitle : "Optimisez le référencement d'un site de photographe",
         competence : "Optimiser la performance d'un site web",
-        tags : "HTML CSS JAVASCRIPT"
-
+        tags : "HTML CSS JAVASCRIPT",
+        github : "https://github.com/Squaad6z/ninacarducci",
 
     },
     {
         name : "Print It",
         subtitle : "Premiers pas sur le langage JavaScript",
         competence : "Programmer en utilisant les fondamentaux de JavaScript",
-        tags : "HTML CSS JAVASCRIPT "
+        tags : "HTML CSS JAVASCRIPT ",
+        github :"https://github.com/Squaad6z/Print-it",
     }
     
 ]
@@ -40,6 +41,11 @@ const toggleModal = () => {
     setModalActive(!modalActive);
 }
 
+const openGithub = () => {
+    const githubLink = infoProjet[carouselIndex].github;
+    window.open(githubLink, '_blank');
+}
+
 const modalClass = modalActive ? "modal active" : "modal";
 
 return (
@@ -52,6 +58,7 @@ return (
             <h2>Compétences évaluées</h2>
             <p>{infoProjet[carouselIndex].competence}</p>
             <p>{infoProjet[carouselIndex].tags}</p>
+            <button type="submit" className='github' onClick={openGithub}><img src="./images/github.svg"></img></button>
         </div>
         </div>
         <button onClick={prevSlide} className="prevButton">
