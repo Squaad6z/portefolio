@@ -75,7 +75,7 @@
     .box{
         margin: 5px;
         width: 250px;
-        height: 20%;
+        height: 25%;
     }
 
     .content {
@@ -83,15 +83,12 @@
     }
 
     .box .description{
-        height: 250px;
-        width: 250px;
+        height: 100%;
+        width: 100%;
         padding: 20px;
         top: 25px; 
     }
-
-    .box:hover .description {
-        top: 12.5px;
-  }}
+}
 
   @media screen and (min-width: 768px) and (max-width: 1023px){
     .content{
@@ -112,8 +109,7 @@
 
     .box .description {
         left: 0;     
-        height: 260px;
-        width: 250px;
+        width: 100%;
         padding:30px;
     }
     main{

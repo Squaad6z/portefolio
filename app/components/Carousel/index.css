@@ -76,21 +76,18 @@ img {
     display: block; /* Affiché lorsque la classe "active" est appliquée */
 }
 
-.modal {
-    opacity: 0;
+/* .modal {
     transform: translateY(-100%);
-    transition: opacity 0.2s, transform 1s;
+    transition: opacity 0.2s, transform 1s;  
+} */
+
+.modal{
+    transform: translateY(0);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
     width: 100%;
     padding: 30px;
     position: absolute;
-    /* background: #0f4479; */
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-}
-.modal.active {
-    opacity: 1;
-    transform: translateY(0);
-
 }
 .close_modal {
     padding: 8px 10px;
@@ -115,6 +112,43 @@ img {
     margin-bottom: 5px;
     color: black;
     margin-left: 0;
+}
+
+.tags{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin: 20px 0px;
+}
+/*TAG*/
+.tag{
+    border-radius: 15px;
+    width: 110px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+}
+.tag_html{
+    background-color: orange;
+}
+.tag_css{
+    background-color: rgb(59, 59, 248);
+}
+.tag_javascript{
+    background-color: yellow;
+}
+.tag_redux{
+    background-color: blueviolet;
+}
+.tag_react{
+    background-color: rgb(95, 164, 255);
+}
+.tag_next{
+    background-color: aliceblue;
 }
 
 .github{
@@ -142,7 +176,7 @@ img {
     }
 
     .modal_container{
-        right: 170px;
+        right: 100px;
     }
 }
 
@@ -173,7 +207,7 @@ img {
     .carousel{
         margin:30px 0px ;
         width: 100%;
-        margin-top: 100px;
+        margin-top: 170px;
     }
 
     .carousel_image{
@@ -197,8 +231,8 @@ img {
 
     .modal_container{
         position: initial;
-        width: 80%;
-        margin-bottom: 80px;
+        width: 90%;
+        margin-bottom: 160px;
         height: 55px;
     }
 
@@ -206,7 +240,6 @@ img {
         display: block;
         padding: 20px;
         opacity: 1;
-        top: 175px;
         position: relative;
     }
 
@@ -237,13 +270,12 @@ img {
         width: 100%;
         position: initial;
         justify-content: center;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .modal{
         display: block;
         position: relative;
-        top: 280px;
         width: 90%;
         opacity: 1;
     }

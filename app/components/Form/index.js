@@ -4,7 +4,7 @@ import './index.css'
 const Form = () => {
   return (
     <main className='contact'>
-    <div className='form'>
+    <form className='form'>
     <section className='form_container'>
         <h1>Me contacter</h1>
         <div className='firstname'>
@@ -29,7 +29,7 @@ const Form = () => {
         </div>
         <button className='submit' type='submit'>Envoyer</button>
     </section>
-    </div>
+    </form>
     </main>
 
   )
