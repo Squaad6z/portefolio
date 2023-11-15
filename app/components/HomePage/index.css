@@ -38,11 +38,11 @@ h1{
     overflow: hidden;
     object-fit: cover;
     border-radius: 50%;
-    filter: grayscale(1);
+    
 }
 
 .homepage_photo:hover{
-    filter: none;
+    filter: grayscale(1);
     object-fit: cover;
 }
 
@@ -151,6 +151,7 @@ h1{
     align-items: center;
     font-size: 23px;
     color:  #0f4479;
+    text-align: center;
 }
 
 .services_informations_description{
@@ -161,6 +162,7 @@ h1{
     display: flex;
     align-items: center;
     color:  #0f4479;
+    text-align: center;
 }
 
 .informations{
@@ -170,6 +172,7 @@ h1{
     height: 250px;
     background-color: #0f4479;
     justify-content: center;
+    line-height: 20px;
 }
 
 h3{
@@ -188,20 +191,17 @@ p{
 
 
 .services_informations{
-    height: 150px;
+    height: 180px;
     width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color:#f0f2f5;
     border-radius: 25px;
-    padding-top: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.services_informations:hover{
-    border: solid 3px #c4cad1;
-}
 
 @media screen and (min-width: 1024px) and (max-width: 1440px){
     .homepage{
@@ -278,6 +278,9 @@ p{
         font-size: 20px;
         width: 90%;
     }
+    .informations{
+        height: 350px;
+    }
 }
 
 @media screen and (min-width: 300px) and (max-width: 767px){
@@ -314,9 +317,14 @@ p{
 
     .informations{
         width: 95%;
-        height: 350px;
-        padding: 20px;
+        height: 580px;
+        padding: 0px;
     }
+
+    .informations p, h3{
+        margin-left: 20px;
+    }
+
 
     .services{
         display: flex;

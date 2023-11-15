@@ -30,9 +30,15 @@ const HomePage = () => {
     </section>
     <section className='informations'>
       <h3>À propos de moi</h3>
-      <p>Passionné par la création d'expériences web élégantes et conviviales,
+      <p>
+        Passionné par la création d'expériences web élégantes et conviviales,
          je suis un développeur front-end dévoué, toujours à la recherche de nouvelles façons
          d'allier design et fonctionnalité pour offrir des solutions numériques exceptionnelles.
+      </p>
+      <p>
+        Ayant effectué une reconversion professionnelle, j'ai suivi avec succès la formation Initialisation
+         Full Stack sur OpenClassrooms. C'est ainsi que j'ai décidé de poursuivre avec la formation d'intégrateur
+         web, afin de perfectionner mes compétences et de créer des interfaces web encore plus impactantes.
       </p>
     </section>
     <section className='services'>
@@ -43,7 +49,7 @@ const HomePage = () => {
         <p className='services_informations_description'>Concevoir des applications web interactives et fonctionnelles pour répondre à vos besoins spécifiques.</p>
       </aside>
       <aside className='services_informations'>
-        <h4 className='services_informations_title'>Expérience Utilisateur & Design</h4>
+        <h4 className='services_informations_title'>Expérience Utilisateur<br></br> & Design</h4>
         <p className='services_informations_description'>Créer des interfaces utilisateur intuitives et esthétiques qui garantissent une expérience mémorable pour vos visiteurs.</p>
       </aside>
       <aside className='services_informations'>
