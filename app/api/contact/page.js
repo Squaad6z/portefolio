@@ -1,19 +1,19 @@
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
 
-
-export default async function contactAPI(req, res) {
+export default async function contact(req, res) {
+  console.log("Request received");
   // Extraction des données de la requête HTTP POST
+  if (req.method === 'POST') {
   const { name, email, tel, subject, message } = req.body;
-  const user = env.EMAIL_USER;
-
+  const userMail = process.env.NODEMAILER_EMAIL
   // Configuration du transporteur Nodemailer pour l'envoi d'emails
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     port: 587,
     secure: false,
     auth: {
-      user: user,
-      pass: process.env.EMAIL_PASSWORD,
+      user: userMail,
+      pass: process.env.NODEMAILER_PW,
     },
     tls: {
       rejectUnauthorized: false,
@@ -23,7 +23,7 @@ export default async function contactAPI(req, res) {
   try {
     const mail = await transporter.sendMail({
       from: email,
-      to: user,
+      to: userMail,
       replyTo: email,
       subject: `Nouveau message de ${name}`,
       html: `
@@ -41,4 +41,4 @@ export default async function contactAPI(req, res) {
     console.log(error);
     res.status(500).json({ message: "erreur dans l'envoi de l'email" });
   }
-}
+}}

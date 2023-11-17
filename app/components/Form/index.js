@@ -5,10 +5,10 @@ import './index.css'
 const Form = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState ({
-        firstname : "",
-        lastname : "",
+        name : "",
         email : "",
-        telephone : "",
+        subject : "",
+        tel : "",
         message : "",
     });
 
@@ -22,11 +22,10 @@ const Form = () => {
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-    
+        setIsSubmitting(true);
         console.log(formData);
     
         try {
-          setIsSubmitting(true);
           const response = await fetch("/api/contact", {
             method: "POST",
             headers: {
@@ -38,22 +37,23 @@ const Form = () => {
           if (response.ok) {
             console.log("Message envoyé avec succès !");
             setFormData({
-              firstname: "",
-              lastname : "",
-              email: "",
-              telephone: "",
+              name: "",
+              email : "",
+              subject: "",
+              tel: "",
               message: "",
             });
           } else {
             console.error(
               "Une erreur s'est produite lors de l'envoi du formulaire :",
-              error,
-            );
+              response.status, // log the status code
+              response.statusText // log the status text            
+              );
           }
         } catch (error) {
           console.error(
             "Une erreur s'est produite lors de l'envoi du formulaire :",
-            error,
+            error
           );
         } finally {
           setIsSubmitting(false);
@@ -67,19 +67,19 @@ const Form = () => {
         <h1>Me contacter</h1>
         <div className='firstname'>
             <label>Nom</label>
-            <input id='firstname_input' value={formData.firstname} type='text' name='firstname' required onChange={handleChange}></input>
+            <input id='firstname_input' value={formData.name} type='text' name='name' required onChange={handleChange}></input>
         </div>
         <div className='lastname'>
             <label>Prénom</label>
-            <input id='lastname_input' value={formData.lastname} type='text' name='lastname' required onChange={handleChange}></input>
+            <input id='lastname_input' value={formData.email} type='email' name='email' required onChange={handleChange}></input>
         </div>
         <div className='email'>
             <label>Email</label>
-            <input id='email_input' value={formData.email} type='email' name='email' required onChange={handleChange}></input>
+            <input id='email_input' value={formData.subject} type='text' name='subject' required onChange={handleChange}></input>
         </div>
         <div className='telephone'>
             <label>Téléphone</label>
-            <input id='telephone_input' value={formData.telephone} type='text' name='telephone' required onChange={handleChange}></input>
+            <input id='telephone_input' value={formData.tel} type='text' name='tel' required onChange={handleChange}></input>
         </div>
         <div className='message'>
             <label>Message</label>
