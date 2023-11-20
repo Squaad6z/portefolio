@@ -23,18 +23,20 @@ body{
   0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%),
   0 -3px 5px rgb(78 78 78 / 25%);}
 
-.firstname ,.lastname ,.email, .telephone, .message{
+.name ,.objet ,.email, .tel, .message{
   display: flex;
   flex-direction: column;
   width: 70%; 
 }
 
-.firstname ,.lastname ,.email, .telephone{
+.name ,.objet ,.email, .tel{
   height: 50px;
 }
 
-.message input{
+.message textarea{
   height: 150px;
+  border: solid 2px ;
+  border-radius: 25px;
 }
 
 .submit{
@@ -82,6 +84,11 @@ h1{
   .form_container{
       width: 90%;
   }
+  .form{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+  }
 }
 
 
@@ -93,7 +100,7 @@ h1{
   .contact{
   height: 100%;
   }
-  .firstname ,.lastname ,.email, .telephone, .message{
+  .name ,.objet ,.email, .tel, .message{
   width: 90%;
   }
 }

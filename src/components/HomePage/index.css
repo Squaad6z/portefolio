@@ -226,7 +226,7 @@ p{
     }
 
     .services_informations{
-        height: 200px;
+        height: 250px;
         width: 260px;
     }
 
@@ -270,7 +270,7 @@ p{
     }
 
     .services_informations{
-        height: 230px;
+        height: 260px;
         width: 220px;
     }
 
@@ -335,8 +335,6 @@ p{
 
     .services_bloc{
         display: flex;
-
-        margin-top: 15px;
         flex-direction: column;
         align-items: center;
         gap: 20px;

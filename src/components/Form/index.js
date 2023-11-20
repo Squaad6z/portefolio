@@ -65,25 +65,25 @@ const Form = () => {
     <form className='form' onSubmit={handleSubmit}>
     <section className='form_container'>
         <h1>Me contacter</h1>
-        <div className='firstname'>
-            <label>Nom</label>
-            <input id='firstname_input' value={formData.name} type='text' name='name' required onChange={handleChange}></input>
-        </div>
-        <div className='lastname'>
-            <label>Prénom</label>
-            <input id='lastname_input' value={formData.email} type='email' name='email' required onChange={handleChange}></input>
+        <div className='name'>
+            <label htmlFor='name'>Nom</label>
+            <input autoComplete='name' id='name' value={formData.name} type='text' name='name' required onChange={handleChange}></input>
         </div>
         <div className='email'>
-            <label>Email</label>
-            <input id='email_input' value={formData.subject} type='text' name='subject' required onChange={handleChange}></input>
+            <label htmlFor='email'>Email</label>
+            <input autoComplete='email' id='email' value={formData.email} type='email' name='email' required onChange={handleChange}></input>
         </div>
-        <div className='telephone'>
-            <label>Téléphone</label>
-            <input id='telephone_input' value={formData.tel} type='text' name='tel' required onChange={handleChange}></input>
+        <div className='objet'>
+            <label htmlFor='objet'>Objet</label>
+            <input autoComplete='objet' id='objet' value={formData.subject} type='text' name='subject' required onChange={handleChange}></input>
+        </div>
+        <div className='tel'>
+            <label htmlFor='tel'>Téléphone</label>
+            <input autoComplete='tel' id='tel' value={formData.tel} type='text' name='tel' required onChange={handleChange}></input>
         </div>
         <div className='message'>
             <label>Message</label>
-            <input id='message_block' rows="6" value={formData.message} name='message' required onChange={handleChange}></input>
+            <textarea autoComplete='message' id='message' rows="6" value={formData.message} name='message' maxLength={250} required onChange={handleChange}></textarea>
         </div>
         <button className='submit' type='submit'>{isSubmitting ? (
               <>
