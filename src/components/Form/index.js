@@ -12,6 +12,12 @@ const Form = () => {
         message : "",
     });
 
+    const [isSuccess, setIsSucces] = useState(false)
+
+    const closeSend = (e) => {
+      setIsSucces(false)
+    }
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -36,6 +42,7 @@ const Form = () => {
     
           if (response.ok) {
             console.log("Message envoyé avec succès !");
+            setIsSucces(true)
             setFormData({
               name: "",
               email : "",
@@ -61,8 +68,16 @@ const Form = () => {
       };
 
   return (
-    <main className='contact'>
+    <section className={`contact ${isSuccess ? 'success' : ''}`}> 
     <form className='form' onSubmit={handleSubmit}>
+    {isSuccess ? (
+            <div className='success_message'>
+              <img onClick={closeSend} className='return_button' src='/images/arrow-left-solid.svg'></img>
+              <img className='validate_icon' src="/images/check-solid.svg"></img>
+              <p>Votre message a été envoyé avec succès!</p>
+            </div>
+          ) : (
+            
     <section className='form_container'>
         <h1>Me contacter</h1>
         <div className='name'>
@@ -82,19 +97,17 @@ const Form = () => {
             <input autoComplete='tel' id='tel' value={formData.tel} type='text' name='tel' required onChange={handleChange}></input>
         </div>
         <div className='message'>
-            <label>Message</label>
+            <label htmlFor='message'>Message</label>
             <textarea autoComplete='message' id='message' rows="6" value={formData.message} name='message' maxLength={250} required onChange={handleChange}></textarea>
         </div>
-        <button className='submit' type='submit'>{isSubmitting ? (
-              <>
-                En cours...
-              </>
-            ) : (
-              "Envoyer"
-            )}</button>
+        <button className='submit' type='submit'>
+                {isSubmitting ? <>En cours...</> : "Envoyer"}
+        </button>
+        
     </section>
+    )}
     </form>
-    </main>
+    </section>
 
   )
 }

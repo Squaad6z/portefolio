@@ -4,14 +4,23 @@ body{
 
 .form{
   display: flex;
-  width: 100%;
   justify-content: center;
   height: 100%;
   align-items: center;
 }
 
+.contact{
+  width: 60%;
+}
+
+.container_contact{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .form_container{
-  width: 30%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +45,8 @@ body{
 .message textarea{
   height: 150px;
   border: solid 2px ;
-  border-radius: 25px;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .submit{
@@ -47,6 +57,7 @@ body{
   font-size: 20px;
   cursor: pointer;
   background-color: #ffffff;
+  color: black;
 }
 
 label{
@@ -68,36 +79,111 @@ h1{
   text-decoration: underline;
 }
 
+.success_message {
+  border-radius: 25px;
+  height: 40%;
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(197, 195, 195);
+  box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),
+  0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%),
+  0 -3px 5px rgb(78 78 78 / 25%);
+  position: fixed;
+  animation: wave 0.5s linear backwards;
+
+}
+
+.return_button{
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@keyframes wave {
+  from{
+    transform:scale(0%);
+  }
+  to {
+    transform: scale(100%);
+  }
+
+}
+
+.validate_icon{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin-bottom: 50px;
+  background-color: green;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1440px){
   .form_container{
-      width: 60%;
+      width: 80%;
+  }
+  .success_message {
+      width: 40%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
+  .container_contact{
+    height: 100%;
+  }
+  main{
+    height: 100%;
+  }
   .form_container{
-      width: 70%;
+      width: 80%;
+  }
+  .success_message{
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 300px) and (max-width: 767px){
   .form_container{
       width: 90%;
+      height: 100%;
   }
   .form{
-    padding-top: 50px;
-    padding-bottom: 50px;
-
+    height: 630px;
+    margin-bottom: 30px;
   }
+  .contact{
+    width: 90%;
+  }
+  .container_contact{
+    flex-direction: column;
+    margin:  50px 0;
+    height: 100%;
+  }
+  .success_message{
+    position: initial;
+    padding: 25px;
+    width: 90%;
+    height: 100%;
+  }
+  .success_message p {
+    text-align: center;
+  }
+  .return_button{
+    position: relative;
+    top: -17%;
+    left: -40%;
+  }
+
 }
 
 
 @media screen and (min-width: 300px) and (max-width: 1023px){
   body{
   flex-direction: column;
-  height: 100%;
-  }
-  .contact{
   height: 100%;
   }
   .name ,.objet ,.email, .tel, .message{

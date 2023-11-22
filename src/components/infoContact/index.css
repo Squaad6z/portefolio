@@ -1,0 +1,23 @@
+.info_contact{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div img{
+    height: 40px;
+}
+
+.personal_email, .personal_facebook, .personal_instagram, .personal_linkedin, .personal_position{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    width: 120px;
+}
