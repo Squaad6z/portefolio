@@ -35,6 +35,15 @@
     border-radius: 25px;
 }
 
+.content_box{
+    display: flex;
+    gap: 50px;
+    width: 70%;
+    height: 90%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
 .content {
     display: flex;
@@ -71,11 +80,11 @@
     top: 25px;
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1275px){
+  @media screen and (min-width: 1024px) and (max-width: 1440px){
     .box{
         margin: 5px;
         width: 250px;
-        height: 25%;
+        height: 35%;
     }
 
     .content {
@@ -88,23 +97,29 @@
         padding: 20px;
         top: 25px; 
     }
+    .content_box{
+        gap: 30px;
+        width: 90%;
+    }
 }
 
   @media screen and (min-width: 768px) and (max-width: 1023px){
     .content{
-        height: 100%;
         align-content: normal;
         display: flex;
         align-items: normal;
+        height: 1400px;
     }
 
     .box{
         margin: 5px;
-        width: 250px;
+        width: 80%;
+        height: 25%;
     }
 
     .box span img{
         top: 25px;
+        padding: 10px;
     }
 
     .box .description {
@@ -112,18 +127,26 @@
         width: 100%;
         padding:30px;
     }
-    main{
-        height: 100%;
+
+    .content_box{
+        width: 90%;
+        height: 50%;
     }
   }
 
   @media screen and (min-width: 300px) and (max-width: 767px){
     .content{
-        height: 1550px;
+        height: 2500px;
+    }
+
+    .content_box{
+        width: 90%;
+        gap: 0;
     }
 
     .box{
-        height: 200px;
+        height: 250px;
+        width: 100%;
     }
 
     .box span img{
@@ -131,8 +154,9 @@
     }
 
     .box .description{
-        height: 200px;
+        height: 250px;
         padding: 25px;
+        width: 100%;
     }
 
     .box:hover .description{

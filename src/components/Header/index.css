@@ -99,7 +99,7 @@ hr{
     .item{
         margin: 0;
         flex-direction: column;
-        width: 75px;
+        width: 25%;
         
     }
     .item .text{
@@ -107,15 +107,17 @@ hr{
         margin-top: 20px;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 80px;
-        text-align: center;
         justify-content: center;
     }
 
     .text{
-        font-size: 15px;
+        font-size: 14px;
         height: 40px;
         align-items: center;
+    }
+
+    a{
+        align-items: flex-start;
     }
 
     hr{
@@ -131,36 +133,3 @@ hr{
         
     }
 }
-/* Responsive 320px */
-/* @media screen and (min-width: 320px) {
-    .sidebar{
-        display: flex;
-        flex-direction: row;
-        height: 70px;
-        width: 100%;
-        border: none;
-    }
-    #home, #profil, #codepc, #reseaux, .text {
-        display: flex;
-        position: initial;
-        text-decoration: none;
-        color: black;
-    }
-
-    .item{
-        margin: 0;
-        flex-direction: column;
-    }
-    .item .text{
-        margin: 0;
-    }
-
-    hr{
-        top: 50px;
-
-    }
-    .sidebar:hover > hr {
-        width: 100%;
-        
-    }
-} */

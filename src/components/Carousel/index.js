@@ -4,7 +4,8 @@ import "./index.css"
 const images= [
     '/images/NinaCarducci.webp',
     '/images/PrintIt.webp',
-    './images/ohmyfood.webp'    
+    './images/ohmyfood.webp',
+    './images/argentbank.webp',    
 ]
 
 const infoProjet = [
@@ -29,7 +30,15 @@ const infoProjet = [
         competence : "Intégrer une maquette en mobile-first & Mettre en œuvre des animations CSS",
         tags : ["HTML", "CSS"],
         github :"https://github.com/Squaad6z/Ohmyfood",
-    }
+    },
+    {
+        name : "Argent Bank",
+        subtitle : "Implémentez le front-end d'une application bancaire avec React",
+        competence : "Afficher les données du back end sur l'interface via des appels API & Configurer des routes API pour la communication client / serveur & Implémenter la gestion des données avec Redux pour assurer le fonctionnement du front",
+        tags : ["HTML", "CSS", "JAVASCRIPT", "REACT", "REDUX"],
+        github : "https://github.com/Squaad6z/argent-bank",
+
+    },
 ]
 const Carousel = () => {
     const [carouselIndex, setCarouselIndex] = useState(0);
@@ -76,7 +85,7 @@ return (
             <img src="/images/chevron-up-solid.svg"></img>
         </button>
         <div className="slide">
-            <img className="carousel_image"src={images[carouselIndex]}></img>
+            <img alt="image projet" className="carousel_image"src={images[carouselIndex]}></img>
             {/* <button onClick={toggleModal} className="modal_info modal_trigger">i</button> */}
         </div>
         <button onClick={nextSlide} className="nextButton"> 

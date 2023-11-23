@@ -223,10 +223,11 @@ p{
 
     .informations{
         width: 100%;
+        height: 300px;
     }
 
     .services_informations{
-        height: 250px;
+        height: 270px;
         width: 260px;
     }
 
@@ -241,9 +242,6 @@ p{
         left: 350px;
     }
 
-    main{
-        height: 100%;
-    }
 
     .homepage_presentation{
         flex-direction: row-reverse;
@@ -267,6 +265,7 @@ p{
         width: 100%;
         justify-content: center;
         font-size: 23px;
+        margin-bottom: 20px;
     }
 
     .services_informations{
@@ -292,13 +291,13 @@ p{
         flex-direction: column;
         margin-top: 10px;
         margin-left: 10px;
-        height: 550px;
+        height: 700px;
         gap: 0px;
     }
 
     .homepage_profil{
         justify-content: flex-end;
-        margin-top: 15px;
+        margin-top: 100px;
         margin-bottom: 10px;
     }
 
@@ -317,7 +316,7 @@ p{
 
     .informations{
         width: 95%;
-        height: 580px;
+        height: 750px;
         padding: 0px;
     }
 
@@ -329,7 +328,7 @@ p{
     .services{
         display: flex;
         margin-top: 20px;
-        height: 650px;
+        height: 800px;
         align-items: center;
     }
 
@@ -345,16 +344,12 @@ p{
 }
 
 @media screen and (min-width: 300px) and (max-width: 340px){
-    .homepage_presentation{
-        height: 550px;
-    }
-
     .region{
         margin-left: 25px;
     }
     .services_informations{
         width: 280px;
-        height: 170px;
+        height: 220px;
     }
 }
 @media screen and (min-width: 341px) and (max-width: 767px){

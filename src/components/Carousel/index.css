@@ -147,9 +147,7 @@ img {
 .tag_react{
     background-color: rgb(95, 164, 255);
 }
-.tag_next{
-    background-color: aliceblue;
-}
+
 
 .github{
     width: 100%;
@@ -191,11 +189,11 @@ img {
     }
 
     .prevButton{
-        top: 167px;
+        top: 45px;
     }
 
     .nextButton{
-        bottom: 167px;
+        bottom: 45px;
     }
 }
 
@@ -271,7 +269,7 @@ img {
         position: initial;
         justify-content: center;
         margin-bottom: 50px;
-    }
+        margin-top: 50px;    }
 
     .modal{
         display: block;

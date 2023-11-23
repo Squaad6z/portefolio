@@ -21,7 +21,7 @@ const HomePage = () => {
     </ul>
     </aside>
     <aside className='homepage_round'>
-    <img className='homepage_photo' src='images/photoprofil_mini.webp'></img>
+    <img className='homepage_photo' src='images/photoprofil_mini.webp' alt='ma photo'></img>
     </aside>
     <div id='homepage_bar'>
     <hr id='homepage_bar_scroll'></hr>

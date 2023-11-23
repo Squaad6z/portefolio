@@ -72,14 +72,14 @@ const Form = () => {
     <form className='form' onSubmit={handleSubmit}>
     {isSuccess ? (
             <div className='success_message'>
-              <img onClick={closeSend} className='return_button' src='/images/arrow-left-solid.svg'></img>
-              <img className='validate_icon' src="/images/check-solid.svg"></img>
+              <img onClick={closeSend} className='return_button' alt='logo button retour' src='/images/arrow-left-solid.svg'></img>
+              <img className='validate_icon' alt='logo validation' src="/images/check-solid.svg"></img>
               <p>Votre message a été envoyé avec succès!</p>
             </div>
           ) : (
             
     <section className='form_container'>
-        <h1>Me contacter</h1>
+        <h1 className='form_title'>Me contacter</h1>
         <div className='name'>
             <label htmlFor='name'>Nom</label>
             <input autoComplete='name' id='name' value={formData.name} type='text' name='name' required onChange={handleChange}></input>
