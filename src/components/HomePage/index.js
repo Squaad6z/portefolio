@@ -5,59 +5,40 @@ import "./index.css"
 
 const HomePage = () => {
   return (
-    <section className='homepage'>
-    <section className='homepage_presentation'>
-    <section className='homepage_title'>
-    <h1>CARNEIRO MOREIRA Steven</h1>
-    <h2 className='homepage_first_title'></h2>
-    <h2 className='homepage_second_title'></h2>
-    </section>
-    <section className='homepage_profil'>
-    <aside className='homepage_description'>
-    <ul className='description_liste'>
-      <li className='description_liste age'>24 ans</li>
-      <li className='description_liste region'>Oise</li>
-      <li className='description_liste ville'>Cuts</li>
-    </ul>
-    </aside>
-    <aside className='homepage_round'>
-    <img className='homepage_photo' src='images/photoprofil_mini.webp' alt='ma photo'></img>
-    </aside>
-    <div id='homepage_bar'>
-    <hr id='homepage_bar_scroll'></hr>
-    </div>
-    </section>
-    </section>
-    <section className='informations'>
-      <h3>À propos de moi</h3>
-      <p>
-        Passionné par la création d'expériences web élégantes et conviviales,
-         je suis un développeur front-end dévoué, toujours à la recherche de nouvelles façons
-         d'allier design et fonctionnalité pour offrir des solutions numériques exceptionnelles.
-      </p>
-      <p>
-        Ayant effectué une reconversion professionnelle, j'ai suivi avec succès la formation Initialisation
-         Full Stack sur OpenClassrooms. C'est ainsi que j'ai décidé de poursuivre avec la formation d'intégrateur
-         web, afin de perfectionner mes compétences et de créer des interfaces web encore plus impactantes.
-      </p>
-    </section>
-    <section className='services'>
-      <h2 className='services_title'>Mes Services</h2>
-      <section className='services_bloc'>
-      <aside className='services_informations'>
-        <h4 className='services_informations_title'>Applications</h4>
-        <p className='services_informations_description'>Concevoir des applications web interactives et fonctionnelles pour répondre à vos besoins spécifiques.</p>
-      </aside>
-      <aside className='services_informations'>
-        <h4 className='services_informations_title'>Expérience Utilisateur<br></br> & Design</h4>
-        <p className='services_informations_description'>Créer des interfaces utilisateur intuitives et esthétiques qui garantissent une expérience mémorable pour vos visiteurs.</p>
-      </aside>
-      <aside className='services_informations'>
-      <h4 className='services_informations_title'>Accessibilité</h4>
-      <p className='services_informations_description'>Assurer que votre site web est accessible à tous en mettant en œuvre des normes d'accessibilité conformes.</p>
-      </aside>
-    </section> 
-    </section>
+    <section className='homepage' id='presentation'>
+      <section className='homepage_presentation'>
+        <section className='homepage_title'>
+          <h1>CARNEIRO MOREIRA Steven</h1>
+          <p className='homepage_first_title'>
+            Enthousiaste et déterminé, je suis un développeur Front-End junior de 24 ans passionné par la création d'expériences web engageantes.
+            <br></br>
+            Ma carrière dans le développement a débuté après une reconversion, où j'ai suivi une formation initiale Full-Stack de 3 mois chez OpenClassrooms.<br></br>
+            Ce premier contact avec le monde du développement a été une révélation pour moi, stimulant ma curiosité et ma passion pour la création numérique.
+          </p>
+        </section>
+        <section className='homepage_profil'>
+          <aside className='homepage_round'>
+            <img className='homepage_photo' src='images/photoprofil.jpg'></img>
+          </aside>
+          <div id='homepage_bar'>
+          </div>
+        </section>
+      </section>
+      <section className='informations'>
+        <h2>Mon Parcours</h2>
+        <p>
+          J'ai choisi de poursuivre ma formation en intégration web chez OpenClassrooms. C'est là que j'ai consolidé mes compétences en tant qu'intégrateur web,
+          découvrant le plaisir de transformer des designs inspirants en réalité interactive.
+          Mon parcours m'a permis de développer une solide compréhension des technologies Front-End modernes telles que HTML, CSS, JavaScript, et des frameworks
+          tels que React, Redux, Next.JS. Je suis constamment à l'affût des nouvelles tendances et des meilleures pratiques pour créer des interfaces utilisateur
+          intuitives et esthétiques.
+        </p>
+        <br></br>
+        <p>
+          Aujourd'hui, je suis passionné par l'idée de contribuer à des projets innovants, d'apprendre continuellement et de collaborer avec des équipes créatives.
+          Mon engagement envers le développement web et ma volonté d'apprendre font de moi un professionnel déterminé à relever de nouveaux défis et à évoluer constamment dans ce domaine dynamique.
+        </p>
+      </section>
     </section>
   )
 }

@@ -1,359 +1,59 @@
-.homepage{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-}
-
 .homepage_presentation{
+    margin-top: 200px;
+    padding: 50px;
     display: flex;
-    flex-direction: row;
-    margin-top: 110px;
-    margin-left: 100px;
-    gap: 35px;
-    color: #0f4479;
-    height: 280px;
+    justify-content: space-around;
+    height: 500px;
+    align-items: center;
 }
 
 .homepage_title{
-    width: 70%;
-}
-
-h1{
-    font-size: 35px;
-}
-
-.homepage_round{
-    display: flex;
-    background-color: white;
-    height: 220px;
-    width: 220px;
-    border-radius: 50% ;
-    border: solid 3px black;
+    padding: 20px;
 }
 
 .homepage_photo{
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+    height: 450px;
+    width: 450px;
     object-fit: cover;
     border-radius: 50%;
-    
-}
-
-.homepage_photo:hover{
-    filter: grayscale(1);
-    object-fit: cover;
-}
-
-#homepage_bar{
-    display: flex;
-    height: 220px;
-    width: 15px;
-    background-color: white;
-    border: solid black;
-    margin-left: 10px;
-}
-
-#homepage_bar_scroll{
-    display: block;
-    width: 12px;
-    height: 0%;
-    background-color: black;
-    border: solid black;
-    position: unset;
-    animation: 1s slide linear 1.5s infinite alternate;
-}
-
-
-.homepage_profil{
-    display: flex;
-    align-items: center;
-}
-
-.description_liste{
-    display: flex;
-    flex-direction: column;
-    color: #0f4479;
-    padding: 10px;
-    font-size: 20px;
-    width: 100px;
-}
-
-.age ,.ville{
-    margin-left: 25px;
-}
-
-
-
-@keyframes slide {
-    from { height: 0%;}
-    to { height: 100%;}
-}
-    
-.homepage_first_title::after{
-    font-size: 30px;
-    content: '';
-    animation: change-title 6s linear 2s infinite running
-
-}
-
-.homepage_second_title::after{
-    font-size: 25px;
-    content: '';
-    animation: change-text 6s linear 2s infinite
-}
-
-@keyframes change-title {
-    from {content : 'Développeur';}
-    50% {content: 'Développeur Front-end';}
-    to {content: 'Développeur Front-end';}
-    
-}
-
-@keyframes change-text {
-    from {content: '';}
-    25% {content: 'Création moderne &';}
-    50% {content: 'Création moderne & responsive de site';}
-    75% {content: 'Création moderne & responsive de site et application web';}
-    to {content: 'Création moderne & responsive de site et application web ';}
-}
-
-.services{
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    animation: 2s services-section linear 2.5s backwards ;
-}
-
-.services_bloc{
-    display: flex;
-    justify-content: space-around;
-}
-
-.services_title{
-    color: #0f4479;
-    font-size: 35px;
-    text-decoration: underline;
-    display: flex;
-    justify-content: center;
-}
-
-@keyframes services-section {
-    from { opacity: 0%;}
-    to {opacity: 100%;}
-}
-
-.services_informations_title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 23px;
-    color:  #0f4479;
-    text-align: center;
-}
-
-.services_informations_description{
-    font-size: 20px;
-    margin-top: 10px;
-    width: 90%;
-    margin-left: 0;
-    display: flex;
-    align-items: center;
-    color:  #0f4479;
-    text-align: center;
 }
 
 .informations{
-    display: flex;
-    flex-direction: column;
-    width: 87%;
-    height: 250px;
-    background-color: #0f4479;
-    justify-content: center;
-    line-height: 20px;
-}
-
-h3{
-    color: white;
-    margin-left: 50px;
-    font-size: 25px;
-}
-
-p{
-    color: white;
-    width: 75%;
-    margin-left: 50px;
-    margin-top: 25px;
-    font-size: 20px;
-}
-
-
-.services_informations{
-    height: 180px;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:#f0f2f5;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-
-@media screen and (min-width: 1024px) and (max-width: 1440px){
-    .homepage{
-        width: 90%;
-    }
-
-    .homepage_presentation{
-        margin-left: 0;
-    }
-
-    .homepage_title{
-        margin-left: 50px;
-        width: 63%;
-    }
-
-    .homepage_round{
-        right: 120px;
-    }
-
-    .informations{
-        width: 100%;
-        height: 300px;
-    }
-
-    .services_informations{
-        height: 270px;
-        width: 260px;
-    }
-
-    .services_informations_description{
-        margin-top: 5px;
-    }
-
+    margin-top: 100px;
+    padding: 50px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
-    #homepage_bar{
-        left: 350px;
-    }
-
-
     .homepage_presentation{
-        flex-direction: row-reverse;
-        margin-left: 10px;
-        margin-top: 0px;
-        justify-content: flex-end;
-        gap: 0px;
+        height: 600px;
     }
 
-    .homepage_round{
-        left: 120px;
+.homepage_photo{
+    height: 300px;
+    width: 300px;
+}
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .homepage_presentation{
+        flex-direction: column-reverse;
+        padding: 20px;
+        height: 600px;
     }
 
     .homepage_title{
-        margin-left: 20px;
-        margin-top: 20px;
+        padding: 0;
     }
 
-    .services_title{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        font-size: 23px;
-        margin-bottom: 20px;
-    }
-
-    .services_informations{
-        height: 260px;
-        width: 220px;
-    }
-
-    .services_informations_title{
-        font-size: 20px;
-        width: 90%;
-    }
-    .informations{
-        height: 350px;
-    }
-}
-
-@media screen and (min-width: 300px) and (max-width: 767px){
-
-    body{
-        height: 100%;
-    }
-    .homepage_presentation{
-        flex-direction: column;
-        margin-top: 10px;
-        margin-left: 10px;
-        height: 700px;
-        gap: 0px;
-    }
-
-    .homepage_profil{
-        justify-content: flex-end;
-        margin-top: 100px;
-        margin-bottom: 10px;
-    }
-
-    #homepage_bar{
-        margin-right: 20px;
-    }
-    #homepage_bar_scroll{
-        left: 20px;
-    }
-
-    .homepage_title{
-        margin-left: 20px;
-        margin-top: 20px;
-        height: 310px;
+    .homepage_photo{
+        width: 200px;
+        height: 200px;
     }
 
     .informations{
-        width: 95%;
-        height: 750px;
-        padding: 0px;
-    }
-
-    .informations p, h3{
-        margin-left: 20px;
-    }
-
-
-    .services{
-        display: flex;
-        margin-top: 20px;
-        height: 800px;
-        align-items: center;
-    }
-
-    .services_bloc{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 90%;
-        padding-bottom: 25px;
-    }
-
-}
-
-@media screen and (min-width: 300px) and (max-width: 340px){
-    .region{
-        margin-left: 25px;
-    }
-    .services_informations{
-        width: 280px;
-        height: 220px;
+        padding: 25px;
+        margin-top: 50px;
     }
 }
-@media screen and (min-width: 341px) and (max-width: 767px){
-    .homepage_round{
-        top: 380px;
-    }
-}
+
+

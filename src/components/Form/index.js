@@ -1,74 +1,77 @@
-"use client"
 import React, {useState} from 'react'
 import './index.css'
 
 const Form = () => {
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [formData, setFormData] = useState ({
-        name : "",
-        email : "",
-        subject : "",
-        tel : "",
-        message : "",
-    });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState ({
+      name : "",
+      email : "",
+      subject : "",
+      tel : "",
+      message : "",
+  });
 
-    const [isSuccess, setIsSucces] = useState(false)
+  const [isSuccess, setIsSucces] = useState(false)
 
-    const closeSend = (e) => {
-      setIsSucces(false)
-    }
+  const closeSend = (e) => {
+    setIsSucces(false)
+  }
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-          ...formData,
-          [name]: value,
+  const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    };
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setIsSubmitting(true);
+      console.log(formData);
+  
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         });
-      };
-
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        console.log(formData);
-    
-        try {
-          const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
+  
+        if (response.ok) {
+          console.log("Message envoyé avec succès !");
+          setIsSucces(true)
+          setFormData({
+            name: "",
+            email : "",
+            subject: "",
+            tel: "",
+            message: "",
           });
-    
-          if (response.ok) {
-            console.log("Message envoyé avec succès !");
-            setIsSucces(true)
-            setFormData({
-              name: "",
-              email : "",
-              subject: "",
-              tel: "",
-              message: "",
-            });
-          } else {
-            console.error(
-              "Une erreur s'est produite lors de l'envoi du formulaire :",
-              response.status, // log the status code
-              response.statusText // log the status text            
-              );
-          }
-        } catch (error) {
+        } else {
           console.error(
             "Une erreur s'est produite lors de l'envoi du formulaire :",
-            error
-          );
-        } finally {
-          setIsSubmitting(false);
+            response.status, // log the status code
+            response.statusText // log the status text            
+            );
         }
-      };
+      } catch (error) {
+        console.error(
+          "Une erreur s'est produite lors de l'envoi du formulaire :",
+          error
+        );
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
 
   return (
-    <section className={`contact ${isSuccess ? 'success' : ''}`}> 
+    <section id='contact' className={`contact ${isSuccess ? 'success' : ''}`}> 
+    <aside className='contact_intro'>
+    <h2>Contactez-moi</h2>
+    <p>N'hésitez pas à me contacter pour discuter de projets passionnants, de collaboration ou simplement pour échanger des idées. Je suis ouvert aux opportunités et toujours enthousiaste à l'idée de découvrir de nouveaux projets.</p>
+    </aside>
     <form className='form' onSubmit={handleSubmit}>
     {isSuccess ? (
             <div className='success_message'>
@@ -77,9 +80,8 @@ const Form = () => {
               <p>Votre message a été envoyé avec succès!</p>
             </div>
           ) : (
-            
     <section className='form_container'>
-        <h1 className='form_title'>Me contacter</h1>
+        <h2 className='form_title'>Me contacter</h2>
         <div className='name'>
             <label htmlFor='name'>Nom</label>
             <input autoComplete='name' id='name' value={formData.name} type='text' name='name' required onChange={handleChange}></input>
@@ -108,7 +110,6 @@ const Form = () => {
     )}
     </form>
     </section>
-
   )
 }
 

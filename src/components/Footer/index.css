@@ -1,0 +1,55 @@
+.info_contact{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.103);
+    box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%), 0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%), 0 -3px 5px rgb(78 78 78 / 25%);
+}
+
+div img{
+    height: 40px;
+}
+
+.personal_email, .personal_facebook, .personal_instagram, .personal_linkedin, .personal_position{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+footer a{
+    font-size: 25px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .info_contact{
+        height: 100px;
+    }
+    .personal_email, .personal_facebook, .personal_instagram, .personal_linkedin, .personal_position{
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5px;
+    }
+
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    .info_contact{
+        flex-direction: column;
+        height: 250px;
+    }
+
+    .info_contact img{
+        width: 30%;
+    }
+
+    .info_contact a{
+        width: 70%;
+    }
+
+    .personal_email, .personal_facebook, .personal_instagram, .personal_linkedin, .personal_position{
+        width: 100%;
+  }
+  }
