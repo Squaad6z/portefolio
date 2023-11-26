@@ -189,5 +189,6 @@
 
     .carousel_image{
         max-width: 250px;
+        width:100%;
     }
 }
