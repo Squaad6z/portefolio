@@ -12,7 +12,7 @@ const HomePage = () => {
           <p className='homepage_first_title'>
             Enthousiaste et déterminé, je suis un développeur Front-End junior de 24 ans passionné par la création d'expériences web engageantes.
             <br></br>
-            Ma carrière dans le développement a débuté après une reconversion, où j'ai suivi une formation initiale Full-Stack de 3 mois chez OpenClassrooms.<br></br>
+            Ma carrière dans le développement a débuté après une reconversion, où j'ai suivi une formation initialisation Full-Stack de 3 mois chez OpenClassrooms.<br></br>
             Ce premier contact avec le monde du développement a été une révélation pour moi, stimulant ma curiosité et ma passion pour la création numérique.
           </p>
         </section>

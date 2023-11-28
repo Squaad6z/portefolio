@@ -88,7 +88,7 @@ textarea{
 .success_message {
   border-radius: 25px;
   height: 40%;
-  width: 30%;
+  width: 300px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@ textarea{
 .return_button{
   height: 50px;
   position: relative;
-  right: 180px;
+  right: 40%;
 }
 
 @keyframes wave {
@@ -145,6 +145,10 @@ textarea{
 @media screen and (min-width: 320px) and (max-width: 767px){
   .form_container{
       width: 90%;
+  }
+
+  .success_message{
+    width: 250px;
   }
 }
 
