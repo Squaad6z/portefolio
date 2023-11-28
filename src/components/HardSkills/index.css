@@ -47,6 +47,7 @@
 
   .card_logo {
     height: 100px;
+    width: 100px;
     border-radius: 25px ;
   }
 
@@ -106,7 +107,6 @@ span{
         width: 100%;
         gap: 50px;
         height: 1800px;
-        justify-content: end;
     }
 
     .hard_skills_intro{
@@ -139,7 +139,6 @@ span{
     .hard_skills_content{
         gap: 20px;
         height: 100%;
-        width: 90%;
-        justify-content:flex-start;
+        width: 100%;
     }
   }

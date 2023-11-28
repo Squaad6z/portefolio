@@ -18,7 +18,7 @@ const HomePage = () => {
         </section>
         <section className='homepage_profil'>
           <aside className='homepage_round'>
-            <img className='homepage_photo' src='images/photoprofil.jpg'></img>
+            <img className='homepage_photo' alt='ma photo de profil' src='images/photoprofil.webp'></img>
           </aside>
           <div id='homepage_bar'>
           </div>

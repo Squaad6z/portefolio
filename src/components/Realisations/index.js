@@ -78,18 +78,18 @@ return (
               <li key={index} className={`tag tag_${tag.toLowerCase()}`}>{tag}</li>
             ))}
           </ul>
-            <button type="submit" className='github' onClick={openGithub}><img src="./images/github.svg"></img></button>
+            <button type="submit" aria-label="GitHub" className='github' onClick={openGithub}><img alt="github logo" src="./images/github.svg"></img></button>
         </aside>
         </div>
         <section className="slide_container">
-        <button onClick={prevSlide} className="prevButton">
-            <img className="slide_button prev" src="/images/chevron-up-solid.svg"></img>
+        <button onClick={prevSlide} aria-label="Prev" className="prevButton">
+            <img className="slide_button prev" alt="fleche haut" src="/images/chevron-up-solid.svg"></img>
         </button>
         <div className="slide">
             <img alt="image projet" className="carousel_image"src={images[carouselIndex]}></img>
         </div>
-        <button onClick={nextSlide} className="nextButton"> 
-            <img className="slide_button next"  src="/images/chevron-down-solid.svg"></img>
+        <button onClick={nextSlide} aria-label="Next" className="nextButton">
+            <img className="slide_button next" alt="fleche bas"  src="/images/chevron-down-solid.svg"></img>
         </button>
         </section>
         </section>
