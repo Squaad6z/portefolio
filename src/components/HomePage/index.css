@@ -1,5 +1,5 @@
 .homepage_presentation{
-    margin-top: 200px;
+    margin-top: 100px;
     padding: 50px;
     display: flex;
     justify-content: space-around;
@@ -12,8 +12,8 @@
 }
 
 .homepage_photo{
-    height: 450px;
-    width: 450px;
+    height: 350px;
+    width: 350px;
     object-fit: cover;
     border-radius: 50%;
 }

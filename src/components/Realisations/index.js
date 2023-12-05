@@ -16,6 +16,7 @@ const infoProjet = [
         competence : "Optimiser la performance d'un site web",
         tags : ["HTML", "CSS", "JAVASCRIPT"],
         github : "https://github.com/Squaad6z/ninacarducci",
+        website : "https://squaad6z.github.io/ninacarducci/"
 
     },
     {
@@ -24,6 +25,7 @@ const infoProjet = [
         competence : "Programmer en utilisant les fondamentaux de JavaScript",
         tags : ["HTML", "CSS", "JAVASCRIPT"],
         github :"https://github.com/Squaad6z/Print-it",
+        website : "https://squaad6z.github.io/Print-it/"
     },
     {
         name : "Ohmyfood",
@@ -31,6 +33,7 @@ const infoProjet = [
         competence : "Intégrer une maquette en mobile-first & Mettre en œuvre des animations CSS",
         tags : ["HTML", "CSS"],
         github :"https://github.com/Squaad6z/Ohmyfood",
+        website : "https://squaad6z.github.io/Ohmyfood/"
     },
     {
         name : "Argent Bank",
@@ -59,6 +62,11 @@ const openGithub = () => {
     window.open(githubLink, '_blank');
 }
 
+const openWebsite = () => {
+    const websiteLink = infoProjet[carouselIndex].website;
+    window.open(websiteLink, '_blank')
+}
+
 return (
     <section className="realisations" id="realisations">
         <div className="realisations_intro">
@@ -79,6 +87,7 @@ return (
             ))}
           </ul>
             <button type="submit" aria-label="GitHub" className='github' onClick={openGithub}><img alt="github logo" src="./images/github.svg"></img></button>
+            <button type="submit" aria-label="website" className='github' onClick={openWebsite}><img alt="pc logo" src="./images/desktop-solid.svg"></img></button>
         </aside>
         </div>
         <section className="slide_container">
