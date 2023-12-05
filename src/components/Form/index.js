@@ -67,7 +67,7 @@ const Form = () => {
     };
 
   return (
-    <section id='contact' className={`contact ${isSuccess ? 'success' : ''}`}> 
+    <section className={`contact ${isSuccess ? 'success' : ''}`}> 
     <aside className='contact_intro'>
     <h2>Contactez-moi</h2>
     <p>N'hésitez pas à me contacter pour discuter de projets passionnants, de collaboration ou simplement pour échanger des idées. Je suis ouvert aux opportunités et toujours enthousiaste à l'idée de découvrir de nouveaux projets.</p>
@@ -81,7 +81,7 @@ const Form = () => {
             </div>
           ) : (
     <section className='form_container'>
-        <h2 className='form_title'>Me contacter</h2>
+        <h2 id='contact' className='form_title'>Me contacter</h2>
         <div className='name'>
             <label htmlFor='name'>Nom</label>
             <input autoComplete='name' id='name' value={formData.name} type='text' name='name' required onChange={handleChange}></input>

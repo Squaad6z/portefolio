@@ -41,7 +41,7 @@ const infoProjet = [
         competence : "Afficher les données du back end sur l'interface via des appels API & Configurer des routes API ",
         tags : ["HTML", "CSS", "JAVASCRIPT", "REACT", "REDUX"],
         github : "https://github.com/Squaad6z/argent-bank",
-
+        website : "https://argent-bank-carneiro-moreiras-projects.vercel.app/"
     },
 ]
 const Realisations = () => {
